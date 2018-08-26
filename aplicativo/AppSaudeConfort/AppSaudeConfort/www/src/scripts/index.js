@@ -42,3 +42,8 @@ function includeHTML() {
 };
 
 includeHTML();
+
+function sairConta() {
+    document.cookie = "id=0; expires=Thu, 18 Dec 2000 12:00:00 UTC; path=/";
+    window.location.href = "principal.html";
+}

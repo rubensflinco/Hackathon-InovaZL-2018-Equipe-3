@@ -1,11 +1,9 @@
 ﻿function submitForm() {
-    var localDor = parseInt($("#localDor:checked").val());
-    var intensidadeDor = parseInt($("#intensidadeDor:checked").val());
-    var tempoSentindo = parseInt($("#tempoSentindo:checked").val());
-    var pancadaCabeca = parseInt($("#pancadaCabeca:checked").val());
-    var desmaio = parseInt($("#desmaio:checked").val()); 
+    var temperatura = parseInt($("#temperatura:checked").val());
+    var graus = parseInt($("#graus:checked").val());
+    var antibiotico = parseInt($("#antibiotico:checked").val()); 
 
-    var somaNivel = localDor + intensidadeDor + tempoSentindo + pancadaCabeca + desmaio;
+    var somaNivel = temperatura + graus + antibiotico;
     var nivel;
 
     if (somaNivel >= 30) {
@@ -27,7 +25,7 @@
 
     var url = "https://projeto.planetsweb.com.br/InovaZL/sistema/API/historico/cadastrar.php";
     var valUsuario = getCookie("id");
-    var valSintoma = "Dor de cabeça";
+    var valSintoma = "Febre";
     var valJSON_perguntas = "{VAZIO}";
     var valNivel = nivel;
     var valP_nivel = somaNivel;
@@ -39,7 +37,10 @@
         if (dataJSON.st_status == "OK") {
             $("#removePosicao").html('<div w3-include-html="fila.html"></div>');
             includeHTML();
-            $("#posicaoFila").html(dataJSON.posicao);
+            setTimeout(function (){
+                $("#posicaoFila").html(dataJSON.posicao);
+            }, 500);
+            
         } else {
             alert(dataJSON.st_motivo);
         }
