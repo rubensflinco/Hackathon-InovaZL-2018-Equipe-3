@@ -1,0 +1,109 @@
+﻿body {
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #18e7f6;
+    margin: 0;
+    padding: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 100vw;
+    padding-top: 0px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+i {
+    text-align: center;
+    width: 120px;
+}
+
+i {
+    color: white;
+    margin-top: 10px;
+}
+
+.container {
+
+    margin-top: 90px;
+  width: 90%;
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+position: relative;
+column-count: 2;
+}
+
+.sintoma1 {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 175px;
+    margin-top: 115px;
+ 
+}
+
+    .sintoma1 > a {
+
+        width: 100%;
+        padding: 7px;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        text-align: center;
+        background-color: #f8ca00;
+        font-family: Roboto;
+        font-weight: 550;
+        font-size: 14px;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 1px ;
+    }
+
+    h1 { 
+        text-align: center;
+        font-family: Roboto;
+        font-weight: 300;
+        color: #667;
+
+    }
+.sintoma1, .sintoma2 > a:hover {
+    text-decoration: none;
+    color: white;
+
+}
+
+.sintoma2 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    margin-top: 115px;
+}
+
+.sintoma2 > a{
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #f8ca00;
+    font-family: Roboto;
+    font-weight: 550;
+    font-size: 14px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 1px;
+}
