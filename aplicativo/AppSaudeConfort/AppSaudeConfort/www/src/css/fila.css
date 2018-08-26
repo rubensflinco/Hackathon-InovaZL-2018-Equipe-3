@@ -1,0 +1,52 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #18e7f6;
+    margin: 0;
+    padding: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 100vw;
+    padding-top: 0px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+i {
+    text-align: center;
+    width: 120px;
+}
+
+i {
+    color: white;
+    margin-top: 10px;
+}
+
+h3{ 
+    color: #444;
+    font-size: 15px;
+    text-align: center;
+}
+
+h4 {
+    color: #444;
+    font-size: 12px;
+    text-align: center;
+}
+
+.container { 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
