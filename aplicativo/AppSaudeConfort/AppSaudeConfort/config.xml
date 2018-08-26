@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myappf3287b" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="pt-BR">
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="saudeconfort.app.v10" version="10.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="pt-BR">
   <name>Saúde Confort</name>
-  <description>Um projeto em branco que usa o Apache Cordova para ajudar você a criar um aplicativo que tem como destino diversas plataformas: Android, iOS e a Plataforma Universal do Windows.</description>
-  <author href="http://cordova.io" email="dev@cordova.apache.org">Seu nome aqui</author>
+  <description>Aplicativo para facilitar a vida dos usuarios que precisam passar em um sistema de saude publico.</description>
+  <author href="http://cordova.io" email="dev@cordova.apache.org">Rubens Flinco, Matheus Enrique, João Vitor, Renato Silva, Abrão Chaves.</author>
   <vs:template-name>BlankJS</vs:template-name>
   <vs:toolsetVersion>6.3.1</vs:toolsetVersion>
   <engine name="android" spec="5.2.1" />
@@ -103,4 +103,6 @@
     <splash src="res/screens/windows/SplashScreen.scale-240.png" width="1152" height="1920" />
     <splash src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" height="1920" />
   </platform>
+  <preference name="ShowTitle" value="True" />
+  <preference name="Fullscreen" value="False" />
 </widget>
