@@ -8,7 +8,7 @@
     height: 100vh;
     width: 100vw;
     background: no-repeat;
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/bg.png);
     background-size: cover;
     z-index: -1000;
 }
@@ -17,13 +17,45 @@
 
 label {
 
-    padding: 10px;
+    padding: 2px 0px;
     font-size: 16px;
     font-weight: 600;
 }
 
-.form-horizontal {
+.form-horizontal  {
     color: white;
     margin-top: 50%;
+}
+
+    input:nth-child(1) {
+        padding: 0;
+        margin: 0;  
+        text-align: center;
+        border: none;
+        border-radius: 20px;
+  height: 35px;
+        width: 220px;
+        background-color: white;
+        box-shadow: rgba(0,0,0,0.1  ) 2px 2px 6px 2px;
+        font-size: 12px;
+        color: #667;
+    }
+
+    input #senha { 
+  padding: 20px;
+    }
+#send {
+
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    height: 35px;
+    background-color: #ffd800;
+    box-shadow: rgba(0,0,0,0.04) 2px 1px 6px 2px;
+    margin-top: 20px;
+    font-size: 13px !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
 }
 
