@@ -1,0 +1,16 @@
+{
+    "host": "planetsweb.com.br",
+    "username": "inovazl@planetsweb.com.br",
+    "password": "ubWD5CWgua2p",
+    "remotePath": "",
+    "protocol": "ftp",
+    "port": 0,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": true,
+    "autoDownload": true,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}
