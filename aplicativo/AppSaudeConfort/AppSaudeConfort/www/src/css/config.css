@@ -1,0 +1,50 @@
+﻿body {
+    width: 95vw;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+
+nav {
+    background-color: #18e7f6;
+    margin: 0;
+    padding: 0px;
+    bottom: 0px;
+    position: fixed;
+    width: 100vw;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+i {
+    text-align: center;
+    width: 120px;
+}
+
+i {
+    color: white;
+    margin-top: 10px;
+}
+
+.container-1 { 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+#perfil { 
+
+    background-color: black;    
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 50px;
+}

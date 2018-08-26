@@ -77,14 +77,20 @@ column-count: 2;
         color: #667;
 
     }
-.sintoma1, .sintoma2 > a:hover {
+.sintoma1 a:hover , .sintoma2 > a:hover {
     text-decoration: none;
     color: white;
 
 }
 
-.sintoma2 {
+.sintoma2:hover {
+    
+    text-decoration: none
 
+    
+}
+
+.sintoma2 {
     display: flex;
     flex-direction: column;
     justify-content: center;

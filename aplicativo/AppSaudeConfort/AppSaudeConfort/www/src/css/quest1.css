@@ -1,0 +1,75 @@
+﻿body { 
+    width: 95vw;
+    padding: 0;
+}
+
+
+nav {
+    background-color: #18e7f6;
+    margin: 0;
+    padding: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 100vw;
+    padding-top: 0px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+i {
+    text-align: center;
+    width: 120px;
+}
+
+i {
+    color: white;
+    margin-top: 10px;
+}
+
+
+.container-1 { 
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding: 10px;
+    flex-flow: column;
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 80vh;
+ 
+}
+
+.container-1 > legend {
+    text-align: center;
+    font-weight: 550;
+
+}
+
+#form1 { 
+    margin-top: 13px;
+    background-color: #ffd800!important;
+    color: white;
+    font-family: Roboto;
+   text-transform: uppercase;
+   font-size: 12px;
+   border: none;
+  
+}
+
+.bootstrap-iso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    width: 90vw;
+    font-family: Roboto;
+    font-weight: 500;
+   
+}
