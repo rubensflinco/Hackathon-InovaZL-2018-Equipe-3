@@ -1,0 +1,10 @@
+Options -Indexes
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+   Header set Access-Control-Allow-Origin "*"
+
+RewriteEngine on
+#RewriteBase /flyspray
+
+</IfModule>
