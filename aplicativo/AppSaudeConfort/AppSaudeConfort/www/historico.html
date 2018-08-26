@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
@@ -16,81 +15,40 @@
     <title></title>
 </head>
 <body>
-    <nav>
+    <div w3-include-html="navbar.html"></div>
 
-        <ul>
-            <a> <i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
-            <a>  <i class="fa fa-history fa-2x" aria-hidden="true"></i></a>
-            <a>  <i class="fa fa-cog fa-2x" aria-hidden="true"></i></a>
-
-        </ul>
-
-    </nav>
     <div id="sidetop"> <h2> SUAS ÚLTIMAS ATIVIDADES </h2> </div>
     <div class="container-1">
 
 
+        <div id="echoItens"></div>
 
-        <div class="itens">
+        <script type="text/javascript" src="src/scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="src/scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="src/scripts/index.js"></script>
+        <script type="text/javascript" src="src/scripts/logado.js"></script>
 
-            <h3>  Sintoma  <span> Gripe  </span></h3>
-            <h3>
-                Nível  <span>  Médio</span>
-                <h3>Data  <span>  08/26/2018 </span>
+        <script>
+            var url = "https://projeto.planetsweb.com.br/InovaZL/sistema/API/historico/listar.php";
+            var valid = getCookie("id");
 
-        </div>
+            $.get(url, { token: "123", usuario: valid }).done(function (data) {
+                var dataJSON = JSON.parse(data);
 
+                if (dataJSON.st_status !== "ERRO") {
+                    jQuery.each(dataJSON, function (i, val) {
+                        var html = '<div class="itens"><h3> Sintoma <span> ' + val.sintoma + ' </span></h3><h3>Nível  <span> ' + val.nivel + ' </span><h3>Data  <span>  ' + val.data + ' </span></div>';
+                        $("#echoItens").append(html);
+                    });
 
-        <div class="itens">
+                } else {
+                    alert(dataJSON.st_motivo);
+                }
 
-            <h3>  Sintoma  <span> Gripe  </span></h3>
-            <h3>
-                Nível  <span>  Médio</span>
-                <h3>Data  <span>  08/26/2018 </span>
-
-        </div>
-
-
-        <div class="itens">
-
-            <h3>  Sintoma  <span> Gripe  </span></h3>
-            <h3>
-                Nível  <span>  Médio</span>
-                <h3>Data  <span>  08/26/2018 </span>
-
-        </div>
-
-
-        <div class="itens">
-
-            <h3>  Sintoma  <span> Gripe  </span></h3>
-            <h3>
-                Nível  <span>  Médio</span>
-                <h3>Data  <span>  08/26/2018 </span>
-
-        </div>
-
-
-        <div class="itens">
-
-            <h3>  Sintoma  <span> Gripe  </span></h3>
-            <h3>
-                Nível  <span>  Médio</span>
-                <h3>Data  <span>  08/26/2018 </span>
-
-        </div>
-
-
-
-        <div class="itens">
-
-            <h3>  Sintoma  <span> Gripe  </span></h3>
-            <h3>
-                Nível  <span>  Médio</span>
-                <h3>Data  <span>  08/26/2018 </span>
-
-        </div>
-
+                console.log(dataJSON);
+            });
+        </script>
 
 
 

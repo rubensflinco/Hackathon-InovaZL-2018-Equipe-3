@@ -15,7 +15,7 @@ $id = $_GET['id'];
 $nome = $_GET['nome'];
 $email = $_GET['email'];
 $senha = md5($_GET['senha']);
-if (($id == null) || ($nome == null) || ($email == null) || ($senha == null)){
+if (($id == null) || ($nome == null) || ($email == null)){
     $json = array(
         'st_status' => "ERRO", 
         'st_motivo' => mb_convert_encoding("Gets faltando ou incorretos.", 'HTML-ENTITIES','UTF-8'));
@@ -24,8 +24,12 @@ if (($id == null) || ($nome == null) || ($email == null) || ($senha == null)){
     exit;
 }
 
+if($senha == null){
+    $updateUser = mysqli_query($connect, "UPDATE `usuarios` SET `nome`='".$nome."',`email`='".$email."' WHERE id = '".$id."'");
+}else{
+    $updateUser = mysqli_query($connect, "UPDATE `usuarios` SET `nome`='".$nome."',`email`='".$email."',`senha`='".$senha."' WHERE id = '".$id."'");
+}
 
-$updateUser = mysqli_query($connect, "UPDATE `usuarios` SET `nome`='".$nome."',`email`='".$email."',`senha`='".$senha."' WHERE id = '".$id."'");
 
 if ($updateUser){
 
