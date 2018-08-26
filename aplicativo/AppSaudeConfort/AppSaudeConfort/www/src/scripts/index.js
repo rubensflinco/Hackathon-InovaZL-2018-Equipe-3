@@ -1,21 +1,44 @@
-﻿// Para uma introdução ao modelo em branco, consulte a seguinte documentação:
-// http://go.microsoft.com/fwlink/?LinkID=397704
-// Para depurar códigos no carregamento de página em dispositivos/emuladores Android ou que simulam o Cordova: inicie o aplicativo, defina os pontos de interrupção 
-// e execute "window.location.reload()" no Console do JavaScript.
-(function () {
-    "use strict";
+﻿function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
-    document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
+function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                    if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                    /*remove the attribute, and call this function once more:*/
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
+        }
+    }
+};
 
-    function onDeviceReady() {
-
-    };
-
-    function onPause() {
-        // TODO: este aplicativo foi suspenso. Salve o estado do aplicativo aqui.
-    };
-
-    function onResume() {
-        // TODO: este aplicativo foi reativado. Restaure o estado do aplicativo aqui.
-    };
-} )();
+includeHTML();
