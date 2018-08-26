@@ -37,9 +37,28 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
+    
  
 }
 
+.container-1 > h1 {
+
+    color: #444;
+    font-weight: 350;
+    font-size: 26px;
+   margin-top: 5px;
+}
+
+.container-1 > p  { 
+
+    font-size: 14px;    
+    font-weight: 250;
+    font-style: italic;
+    color: #777;
+    text-align: center;
+    width: 80vw;
+}
 #perfil { 
 
     background-color: black;    
@@ -48,3 +67,34 @@ i {
     border-radius: 50%;
     margin-top: 50px;
 }
+
+.dados {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    backgrond-color:aquamarine;
+    padding: 10px;
+    box-shadow: rgba(0,0,0,0.1) 2px 2px  8px 2px;
+}
+.dados:hover {
+
+    margin-top: 5px;
+  transition:1s;
+  background-color: #333;
+    color: white;
+}
+    .dados > p {
+
+        font-size: 14px;
+        font-weight: 500;
+        font-style: bold;
+        color: #444;
+    }
+
+    .dados > p > span {
+        font-size: 14px;
+        font-weight: 300;
+        color: #777;
+    }
