@@ -44,6 +44,11 @@ label {
     input #senha { 
   padding: 20px;
     }
+
+    * input:focus { 
+
+        outline: none;
+    }
 #send {
 
     text-align: center;

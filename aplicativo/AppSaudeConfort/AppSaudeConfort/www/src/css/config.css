@@ -102,6 +102,13 @@ input:focus {
         font-style: bold;
         color: #444;
     }
+fieldset {
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
 
     #send {
 
