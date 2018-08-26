@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
@@ -22,7 +21,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <form method="post">
+                        <form action="javascript:submitForm();">
                             <div class="form-group" id="div_checkbox">
                                 <label class="control-label requiredField" for="checkbox">
                                     Local da dor?
@@ -30,25 +29,26 @@
                                         *
                                     </span>
                                 </label>
+
                                 <div class=" ">
                                     <label class="checkbox-inline">
-                                        <input name="checkbox" type="radio" value="Lado direito" />
+                                        <input id="localDor" name="localDor" type="radio" value="3" />
                                         Lado direito
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input name="checkbox" type="radio" value="Lado esquerdo" />
+                                        <input id="localDor" name="localDor" type="radio" value="5" />
                                         Lado esquerdo
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input name="checkbox" type="radio" value="Ambos" />
+                                        <input id="localDor" name="localDor" type="radio" value="7" />
                                         Ambos
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input name="checkbox" type="radio" value="Alto do crânio" />
+                                        <input id="localDor" name="localDor" type="radio" value="10" />
                                         Alto do crânio
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input name="checkbox" type="radio" value="Testa" />
+                                        <input id="localDor" name="localDor" type="radio" value="1" />
                                         Testa
                                     </label>
 
@@ -63,15 +63,15 @@
                                 </label>
                                 <div class=" ">
                                     <label class="checkbox-inline">
-                                        <input name="checkbox1" type="radio" value="Baixa" />
+                                        <input id="intensidadeDor" name="intensidadeDor" type="radio" value="2" />
                                         Baixa
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input name="checkbox1" type="radio" value="Média" />
+                                        <input id="intensidadeDor" name="intensidadeDor" type="radio" value="6" />
                                         Média
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input name="checkbox1" type="radio" value="Alta" />
+                                        <input id="intensidadeDor" name="intensidadeDor" type="radio" value="10" />
                                         Alta
                                     </label>
                                 </div>
@@ -85,11 +85,11 @@
                                 </label>
                                 <div class=" ">
                                     <label class="checkbox-inline">
-                                        <input name="checkbox2" type="radio" value="Algumas horas" />
+                                        <input id="tempoSentindo" name="tempoSentindo" type="radio" value="2" />
                                         Algumas horas
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input name="checkbox2" type="radio" value="Alguns dias" />
+                                        <input id="tempoSentindo" name="tempoSentindo" type="radio" value="3" />
                                         Alguns dias
                                     </label>
                                 </div>
@@ -102,11 +102,11 @@
                                 </label>
                                 <div class=" ">
                                     <label class="checkbox-inline">
-                                        <input name="checkbox2" type="radio" value="3" />
+                                        <input id="pancadaCabeca" name="pancadaCabeca" type="radio" value="10" />
                                         Sim
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input name="checkbox2" type="radio" value="4" />
+                                        <input id="pancadaCabeca" name="pancadaCabeca" type="radio" value="0" />
                                         Não
                                     </label>
                                 </div>
@@ -119,31 +119,31 @@
                                 </label>
                                 <div class=" ">
                                     <label class="checkbox-inline">
-                                        <input name="checkbox2" type="radio" value="Algumas horas" />
+                                        <input id="desmaio" name="desmaio" type="radio" value="10" />
                                         Sim
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input name="checkbox2" type="radio" value="Alguns dias" />
+                                        <input id="desmaio" name="desmaio" type="radio" value="0" />
                                         Não
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group">
+
+
+                            <div class="col-md-4">
+                                <input id="form1" name="Enviar" type="submit" class="form-control input-md" required="">
 
                             </div>
+
+                            <div class="col-md-4">
+                                <input value="ADICIONAR MAIS UM SINTOMA" id="form2" name="Retroceder" type="submit" class="form-control input-md" required="">
+
+                            </div>
+
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <input id="form1" name="Enviar" type="submit" class="form-control input-md" required="">
-
-        </div>
-
-        <div class="col-md-4">
-            <input  value="ADICIONAR MAIS UM SINTOMA" id="form2" name="Retroceder" type="submit" class="form-control input-md" required="">
-
         </div>
     </div>
 
@@ -151,5 +151,11 @@
     </form>
     </div>
     </div>
+    <script type="text/javascript" src="src/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="src/scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="src/scripts/index.js"></script>
+    <script type="text/javascript" src="src/scripts/quest2.js"></script>
+    <script type="text/javascript" src="src/scripts/logado.js"></script>
 </body>
 </html>

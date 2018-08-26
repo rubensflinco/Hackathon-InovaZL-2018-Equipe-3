@@ -1,0 +1,14 @@
+{
+  "ftp://planetsweb.com.br@inovazl@planetsweb.com.br": {
+    ".ftpquota": {
+      "type": "-",
+      "size": 4,
+      "lmtime": 0,
+      "modified": false
+    },
+    "@referencias": {},
+    "aplicativo": {},
+    "sistema": {}
+  },
+  "$version": 1
+}
