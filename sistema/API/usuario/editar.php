@@ -25,7 +25,7 @@ if (($id == null) || ($nome == null) || ($email == null) || ($senha == null)){
 }
 
 
-$updateUser = mysqli_fetch_array( mysqli_query($connect, "UPDATE `usuarios` SET `nome`='".$nome."',`email`='".$email."',`senha`='".$senha."' WHERE id = '".$id."'"));
+$updateUser = mysqli_query($connect, "UPDATE `usuarios` SET `nome`='".$nome."',`email`='".$email."',`senha`='".$senha."' WHERE id = '".$id."'");
 
 if ($updateUser){
 

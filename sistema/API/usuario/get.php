@@ -12,10 +12,7 @@ if ($_GET['token'] !== $tokenAPI){
 }
 
 $id = $_GET['id'];
-$nome = $_GET['nome'];
-$email = $_GET['email'];
-$senha = md5($_GET['senha']);
-if (($id == null) || ($nome == null) || ($email == null) || ($senha == null)){
+if ($id == null){
     $json = array(
         'st_status' => "ERRO", 
         'st_motivo' => mb_convert_encoding("Gets faltando ou incorretos.", 'HTML-ENTITIES','UTF-8'));
@@ -27,7 +24,7 @@ if (($id == null) || ($nome == null) || ($email == null) || ($senha == null)){
 
 $getUser = mysqli_fetch_array( mysqli_query($connect, "SELECT * FROM `usuarios` WHERE `id` = '".$id."'"));
 
-if ($updateUser){
+if ($getUser){
     $json = array(
         'st_status' => "OK", 
         'st_motivo' => mb_convert_encoding("Conseguimos acessar consultar o banco de dados.", 'HTML-ENTITIES','UTF-8'),
