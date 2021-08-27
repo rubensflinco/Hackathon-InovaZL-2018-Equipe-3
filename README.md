@@ -3,7 +3,7 @@ Hackathon InovaZL 2018, somos a equipe 3.
 
 # Equipe 3:
 <br/>
-<a href="https://github.com/JotinhaBR">Rubens Flinco</a>, <a href="https://github.com/Joaovsa7">João Vitor</a>, Renato Silva, Matheus Enrique, Abrão Chaves.
+<a href="https://github.com/rubensflinco">Rubens Flinco</a>, <a href="https://github.com/Joaovsa7">João Vitor</a>, Renato Silva, Matheus Enrique, Abrão Chaves.
 
 <br/>
 <hr>
